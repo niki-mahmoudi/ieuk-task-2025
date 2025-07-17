@@ -1,9 +1,18 @@
 # ieuk-task-2025
-This repo contains the log file for completing the 2025 IEUK Engineering task! The log file is too big to view in browser so you'll need to download it to your local machine. 
+## Project overview
+The project replicates a traffic problem causing website outtages for a small media startup. The objective is to identify the cause of the problem by reviewing the website logs and to recommend a strategy to resolve server overload.
 
-## Download Task
-### Via Github UI 
-https://github.com/user-attachments/assets/81972137-bf32-42c1-bc7d-dc65a0b9398f
+## File structure
+### `analyser` file
+This program is made to analyse the activity of each IP address.
+### `checker` file
+This program is a real-time checker for the logs where it flags suspicious behaviours. This checker can be run from containers such as Docker which is used as an example.
 
-### Via Git
-You'll need to install Git and the Git LFS extension (which can be found [here](https://git-lfs.com/)). If you're unfamiliar with Git, I wouldn't worry about this—just download the log file via the UI. Using Git is not part of the task, so it's not worth spending too much time on it.
+## How to run
+### Install dependencies
+`pip install -r requirements.txt`
+### Run the checker file
+The chcker file can be used either with a container or by it's own on log files.
+
+## License
+This project is created for learning purposes during IEUK 2025 and is not licensed for commercial use.
