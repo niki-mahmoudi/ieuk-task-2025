@@ -7,21 +7,17 @@ WORKDIR /app
 # install app dependancies
 RUN npm install
 
-# COPY requirements.txt ./
-# RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
 # copy the rest of our app into the container
-COPY analyse_logs.py ./
-# COPY tail.py ./
-# COPY tests/ ./tests/
+COPY . .
+
 
 # # set port environment variable
 # ENV PORT=9000
 # # expose the port so our computer can access it
 # EXPOSE 9000
 
-# # run the app
-# CMD ["npm", "start"]
-
-ENTRYPOINT ["python", "analyze_logs.py"]
-CMD ["--help"]
+# run the app
+CMD ["npm", "start"]
